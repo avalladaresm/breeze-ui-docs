@@ -5,13 +5,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Breeze-UI',
   tagline: 'Beautiful components built using Tailwind CSS',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://avalladaresm.github.io',
+  baseUrl: '/breeze-ui-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'avalladaresm', // Usually your GitHub org/user name.
-  projectName: 'breeze-ui', // Usually your repo name.
+  projectName: 'breeze-ui-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Breeze-UI',
@@ -78,4 +78,10 @@ module.exports = {
       },
     ],
   ],
+  plugins: ['@docusaurus/theme-live-codeblock'],
+  themeConfig: {
+    liveCodeBlock: {
+      playgroundPosition: 'top',
+    },
+  },
 };

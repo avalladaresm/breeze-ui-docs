@@ -1,0 +1,33 @@
+---
+sidebar_position: 2
+---
+
+# Button
+
+Custom button component styled using Tailwind CSS
+
+## Props
+
+|    Prop   | PropType                                          |                               Description                              | Required |
+|:---------:|---------------------------------------------------|------------------------------------------------------------------------|:--------:|
+| className | string                                            | any Tailwind CSS class                                                 | false    |
+| disabled  | boolean                                           | whether the button is disabled or not                                  | false    |
+| label     | string                                            | text to appear inside the button                                       | false    |
+| icon      | JSX.Element                                       | a React icon component (i.e. a Heroicons component)                    | false    |
+| iconOnly  | boolean                                           | whether to only show the icon without the `label` prop                 | false    |
+| innerRef  | MutableRefObject<undefined\>                      | needed to use with Headless-UI Dialog (Modal) component                | false    |
+| isLoading | boolean                                           | whether to show a loading spinner when waiting for something to happen | false    |
+| onClick   | () => void                                        | onClick handler function                                               | false    |
+| priority  | "primary" \| "secondary" \| "white" \| "icononly" | button color fill type                                                 | false    |
+| type      | "button" \| "submit" \| "reset"                   | button type                                                            | true     |
+
+
+```jsx live
+function MyPlayground(props) {
+  return (
+    <div>
+      <Button onClick={() => alert('hey!')}>Click me</Button>
+    </div>
+  );
+}
+```
