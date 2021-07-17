@@ -12,7 +12,11 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'avalladaresm', // Usually your GitHub org/user name.
   projectName: 'breeze-ui-docs', // Usually your repo name.
+  plugins: ['@docusaurus/theme-live-codeblock'],
   themeConfig: {
+    liveCodeBlock: {
+      playgroundPosition: 'top',
+    },
     navbar: {
       title: 'Breeze-UI',
       logo: {
@@ -78,10 +82,4 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['@docusaurus/theme-live-codeblock'],
-  themeConfig: {
-    liveCodeBlock: {
-      playgroundPosition: 'top',
-    },
-  },
 };

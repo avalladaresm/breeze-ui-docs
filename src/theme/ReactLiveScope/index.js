@@ -6,13 +6,17 @@
  */
 
 import React from 'react';
-import { Button } from 'breeze-ui'
+import "tailwindcss/dist/tailwind.css"
+import "breeze-ui/build/index.css"
+import * as BreezeUI from 'breeze-ui'
+import * as HeroIcons from '@heroicons/react/outline'
 
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,
   ...React,
-  Button
+  ...BreezeUI,
+  ...HeroIcons
 };
 
 export default ReactLiveScope;

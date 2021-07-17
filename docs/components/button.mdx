@@ -8,25 +8,27 @@ Custom button component styled using Tailwind CSS
 
 ## Props
 
-|    Prop   | PropType                                          |                               Description                              | Required |
-|:---------:|---------------------------------------------------|------------------------------------------------------------------------|:--------:|
-| className | string                                            | any Tailwind CSS class                                                 | false    |
-| disabled  | boolean                                           | whether the button is disabled or not                                  | false    |
-| label     | string                                            | text to appear inside the button                                       | false    |
-| icon      | JSX.Element                                       | a React icon component (i.e. a Heroicons component)                    | false    |
-| iconOnly  | boolean                                           | whether to only show the icon without the `label` prop                 | false    |
-| innerRef  | MutableRefObject<undefined\>                      | needed to use with Headless-UI Dialog (Modal) component                | false    |
-| isLoading | boolean                                           | whether to show a loading spinner when waiting for something to happen | false    |
-| onClick   | () => void                                        | onClick handler function                                               | false    |
-| priority  | "primary" \| "secondary" \| "white" \| "icononly" | button color fill type                                                 | false    |
-| type      | "button" \| "submit" \| "reset"                   | button type                                                            | true     |
+| Prop      | PropType                                          | Description                                                            | Required | Default value |
+|-----------|---------------------------------------------------|------------------------------------------------------------------------|----------|---------------|
+| className | string                                            | any Tailwind CSS class                                                 | no       |               |
+| disabled  | boolean                                           | whether the button is disabled or not                                  | no       | `false`       |
+| label     | string                                            | text to appear inside the button                                       | no       |               |
+| icon      | JSX.Element                                       | a React icon component (i.e. a Heroicons component)                    | no       |               |
+| iconOnly  | boolean                                           | whether to only show the icon without the label prop                   | no       | `false`       |
+| innerRef  | MutableRefObject<null\>                            | needed to use with Headless-UI Dialog (Modal) component                | no       |               |
+| isLoading | boolean                                           | whether to show a loading spinner when waiting for something to happen | no       | `false`       |
+| onClick   | () => void                                        | onClick handler function                                               | no       |               |
+| priority  | "primary" \| "secondary" \| "ghost" \| "icononly" | button color fill type                                                 | no       | `"primary"`   |
+| type      | "button" \| "submit" \| "reset"                   | button type                                                            | yes      | `"button"`    |
 
 
 ```jsx live
 function MyPlayground(props) {
+  const [counter, setCounter] = useState(0)
   return (
-    <div>
-      <Button onClick={() => alert('hey!')}>Click me</Button>
+    <div className="flex space-x-2 items-center">
+      <Button onClick={() => setCounter(counter + 1)} label="Click me!"  />
+      <div>Clicked {counter} times!</div>
     </div>
   );
 }

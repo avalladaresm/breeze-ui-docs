@@ -17,9 +17,10 @@
     "@docusaurus/core": "2.0.0-beta.3",
     "@docusaurus/preset-classic": "2.0.0-beta.3",
     "@docusaurus/theme-live-codeblock": "^2.0.0-beta.3",
+    "@heroicons/react": "^1.0.2",
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
-    "breeze-ui": "^0.0.1",
+    "breeze-ui": "0.0.9",
     "clsx": "^1.1.1",
     "file-loader": "^6.2.0",
     "prism-react-renderer": "^1.2.1",
@@ -38,5 +39,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
   }
 }
